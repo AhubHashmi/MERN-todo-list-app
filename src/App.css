@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+/* General Body Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #282c34;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styling */
+.container-fluid {
+  text-align: center;
+  background-color: #282c34;
   color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Input and Button Styling */
+input[type="text"] {
+  width: 75%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #282c34;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 10px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #61dafb;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+/* ToDo Items Container */
+div.todo-container {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todo-item:hover {
+  background-color: #f1f1f1;
+}
+
+.todo-item div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.todo-item svg {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  transition: color 0.3s ease;
+}
+
+.todo-item svg:hover {
+  color: #ff3b3b;
+}
+
+.todo-item svg:first-child {
+  color: #2ecc71;
+}
+
+.todo-item svg:first-child:hover {
+  color: #27ae60;
 }
